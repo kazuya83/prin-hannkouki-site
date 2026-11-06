@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>ページが見つかりません</title>
+<script>
+  // 移したゲームの中のページは、同じパスのまま新しい場所へ送る
+  if (/^\/(machimeshi|mirai-sugoroku|turbo-friends|worktree-kanban)(\/|$)/.test(location.pathname)) {
+    location.replace('https://kazuya83.github.io' + location.pathname + location.search + location.hash);
+  }
+</script>
+</head>
+<body><p>ページが見つかりません。<a href="/">トップへ戻る</a></p></body>
+</html>

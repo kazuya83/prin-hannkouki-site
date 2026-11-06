@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ゲームひろば</title>
+<script>
+// 招待URL（/?room=...）でトップに来た人はミライすごろくへ転送する
+if(location.search)location.replace("mirai-sugoroku/"+location.search+location.hash);
+</script>
+<style>
+:root{--bg:#fff8ee;--panel:#ffffff;--ink:#3b2f25;--sub:#7a6a5a;--accent:#ff7a3d;--line:#f0e2cf}
+@media (prefers-color-scheme:dark){:root{--bg:#1f1a16;--panel:#2a231e;--ink:#f3e9dd;--sub:#bfae9b;--line:#3d332b}}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:grid;place-items:center;background:var(--bg);color:var(--ink);font-family:"Hiragino Sans","Noto Sans JP",system-ui,sans-serif;padding:24px 16px}
+main{width:min(100%,520px);display:grid;gap:16px;text-align:center}
+h1{margin:0;font-size:24px}
+p{margin:0;color:var(--sub)}
+a.game{display:grid;gap:6px;text-decoration:none;color:var(--ink);background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:0 8px 24px rgba(0,0,0,.08);transition:transform .15s}
+a.game:hover{transform:translateY(-3px)}
+a.game .i{font-size:48px}
+a.game b{font-size:20px}
+a.game span{color:var(--sub);font-size:14px}
+</style>
+</head>
+<body>
+<main>
+  <h1>🎮 ゲームひろば</h1>
+  <p>友達とオンラインで遊べるゲームです。</p>
+  <a class="game" href="https://kazuya83.github.io/mirai-sugoroku/"><span class="i">🎲</span><b>ミライすごろく</b><span>人生すごろくを友達とオンラインで。子ども時代からゴールまで、仕事・恋愛・家族のできごとがいっぱい。</span></a>
+  <a class="game" href="https://kazuya83.github.io/turbo-friends/"><span class="i">🏎️</span><b>ターボフレンズ</b><span>友達とオンラインで遊べる3Dカートレース。個性たっぷりの12キャラと5つのコースで、アイテムやドリフトを使って1位をめざそう。</span></a>
+  <a class="game" href="https://kazuya83.github.io/machimeshi/"><span class="i">🍜</span><b>みんなでまちめし</b><span>友達と同じ町でお店を開いて、お客さんを取り合う飲食店経営ゲーム。ラーメン・カフェ・寿司など6ジャンルから選んで、町いちばんの人気店をめざそう。</span></a>
+</main>
+</body>
+</html>
